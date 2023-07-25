@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --gray: #67686c;
+  --dark-gray: #383838;
+
+  --light-purple: #f3f1fd;
+  --muted-purple: #bfb8d8;
+  --purple: #5e40f5;
+
+  --white: white;
+
+  --br: 10px;
+  --br-sm: 5px;
+
+  --sp-2: 2px;
+  --sp-8: 8px;
+  --sp-12: 12px;
+  --sp-16: 16px;
+  --sp-20: 20px;
+  --sp-24: 24px;
+  --sp-32: 32px;
+  --sp-48: 48px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: white;
+  color: black;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+button,
+input {
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+label,
+button {
+  font-weight: 500;
+}
+
+.container {
+  width: min(100% - 6rem, 60rem);
+  margin-inline: auto;
+  padding-block: var(--sp-48);
+}
+
+.fa-credit-card {
+  color: var(--purple);
+  margin-right: var(--sp-8);
+}
+
+h1 {
+  margin-bottom: var(--sp-12);
+}
+
+p {
+  margin-bottom: var(--sp-48);
+  color: var(--gray);
+}
+
+/* form */
+
+#expense-form-container {
+  background-color: var(--light-purple);
+  border-radius: var(--br);
+  padding: var(--sp-32);
+}
+
+h2 {
+  margin-bottom: var(--sp-20);
+}
+
+#expense-form,
+label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-20);
+}
+
+label {
+  gap: var(--sp-8);
+}
+
+input,
+button {
+  border: solid 1px var(--purple);
+  padding: var(--sp-12);
+  border-radius: var(--br-sm);
+}
+
+button {
+  color: var(--white);
+  background-color: var(--purple);
+}
+
+/* list */
+
+#expense-list {
+  padding-inline-start: 0;
+}
+
+#expense-list li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 100px) minmax(0, 90px) minmax(0, 90px);
+  align-items: center;
+  gap: calc(var(--sp-2) * 5);
+  border-bottom: solid 1px var(--muted-purple);
+  padding-block: var(--sp-16);
+}
+
+.cost {
+  color: var(--gray);
+}
+
+.date {
+  font-size: 14px;
+}
+
+/* edit/delete buttons */
+
+#expense-list li button {
+  font-size: 14px;
+  line-height: 1;
+  color: red;
+  background-color: rgba(255, 0, 0, 0.071);
+  border: none;
+  padding: var(--sp-12);
+}
+
+#expense-list li button:last-of-type {
+  color: rgb(0, 159, 34);
+  background-color: rgba(1, 174, 30, 0.071);
+}
